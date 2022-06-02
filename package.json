@@ -1,0 +1,32 @@
+{
+  "name": "mentoring-backend",
+  "version": "1.0.0",
+  "description": "Backend of mentoring, an application that connects mentors and mentees",
+  "main": "index.js",
+  "author": "Taciano Scur",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "dev": "nodemon",
+    "start": "node dist/index.js",
+    "build": "rimraf ./dist && tsc"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.12",
+    "@types/express": "^4.17.13",
+    "@types/node": "^17.0.38",
+    "nodemon": "^2.0.16",
+    "rimraf": "^3.0.2",
+    "ts-node": "^10.8.0",
+    "typescript": "^4.7.2"
+  },
+  "dependencies": {
+    "@prisma/client": "^3.14.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "mysql2": "^2.3.3",
+    "path": "^0.12.7",
+    "prisma": "^3.14.0"
+  }
+}
