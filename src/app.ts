@@ -1,14 +1,19 @@
 import express, { Express } from 'express';
 import cors from 'cors';
 
-import routes from './routes';
+import { createRoutes } from './routes';
 //const errorHandler = require('./middlewares/errorHandler');
-const app: Express = express();
 
-app.use(cors());
-app.use(express.json());
+export class App {
+  createServer(): Express {
+    const app = express();
 
-routes(app);
-//app.use(errorHandler);
+    app.use(cors());
+    app.use(express.json());
+    //app.use(errorHandler);
 
-export default app;
+    createRoutes(app);
+
+    return app;
+  }
+}

@@ -1,9 +1,10 @@
 import dotenv from 'dotenv';
-
 dotenv.config();
 
+import { App } from './app';
+
+const app = new App().createServer();
 const port = process.env.PORT;
-import app from './app';
 
 if (process.env.NODE_ENV !== 'test') {
     app.listen(port, () => {

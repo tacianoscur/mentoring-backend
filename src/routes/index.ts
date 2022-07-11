@@ -1,8 +1,6 @@
 import { Express } from 'express';
 import users from './users';
 
-const routes = (app: Express) => {
-  app.use(users);
-};
-
-export default routes;
+export const createRoutes = (app: Express): void => {
+    app.use(users);
+}
